@@ -3,7 +3,7 @@
 public class Product
 {
     public Product() { }
-
+// Ви можете покласти довільні значення в поля, в тому числі і від'ємні.
     public Product(int id, string name, decimal price, double weight)
     {
         Id = id;
