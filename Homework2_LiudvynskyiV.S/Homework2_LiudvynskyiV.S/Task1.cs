@@ -13,7 +13,8 @@ public class Task1
         _height = height;
         _arr = new int[height, width];
     }
-
+// краще методи заповнення  і окремо метод ToString
+    
     public void PrintVerticalSnakeTypeMatrix()
     {
         for (var i = 0; i < _height; i++)
