@@ -2,9 +2,9 @@
 
 // Homework #5
 public class Basket
-{
+{//Порушення інкапсуляції
     public IEnumerable<Product> Products { get; set; }
-
+// Прив'язка до ініалізуючого об'єкту.
     public Basket(IEnumerable<Product> products)
     {
         Products = products;
@@ -27,7 +27,7 @@ public class Basket
     {
         var firstWeightMeasure = Products.First().WeightMeasure;
         foreach (var product in Products)
-        {
+        {// Не розумію ідеї
             if (product.WeightMeasure != firstWeightMeasure)
             {
                 return false;
@@ -46,7 +46,7 @@ public class Basket
         throw new ArgumentException("In your basket not all products have " +
                                     "the same currencies or weight measures!");
     }
-
+// Метод роздруку в модельному класі.
     public void Print()
     {
         foreach (var product in GetBasket())
