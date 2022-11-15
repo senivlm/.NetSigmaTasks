@@ -18,7 +18,7 @@ public class NumbersArrayWrapper
     }
     
     public int this[int index]
-    {
+    {// Що буде у випадку некорктного індексу?
         get => _array[index];
         set => _array[index] = value;
     }
@@ -44,7 +44,8 @@ public class NumbersArrayWrapper
         });
         return string.Join("\n", uniqueElements);
     }
-
+// У цьому класі має бути метод знаходження послідовностей. Роздрук в іншому класі.
+    
     public void PrintTwoLongestPrimeSequences()
     {
         var sequences = new List<List<int>>();
@@ -73,7 +74,7 @@ public class NumbersArrayWrapper
                 }
             }
         }
-
+// Якщо послідовність велика занадто дорого всю її сортувати для знаходження тільки перших 2.
         var sortedSequences = sequences
             .OrderByDescending(x => x.Count)
             .Take(2)
@@ -90,7 +91,7 @@ public class NumbersArrayWrapper
     }
 
     private bool IsPrime(int n)
-    {
+    {// не оптимально і є проблема в linq
         if (n > 1)
         {
             return Enumerable.Range(1, n).Where(x => n%x == 0)
